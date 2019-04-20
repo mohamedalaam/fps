@@ -1,0 +1,14 @@
+﻿#version 330 core
+
+vec3 textureColor;
+in vec3 fragColor;
+in vec2 uvout;
+out vec3 color;
+uniform sampler2D mo;
+
+void main()
+{
+	textureColor = texture( mo, uvout ).rgb;
+
+	color=textureColor;
+}
